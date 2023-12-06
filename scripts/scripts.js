@@ -103,7 +103,7 @@ function letterGradeHandler(total){
     }
 };
 function exportInformation(hw,q,e,p,t,l){
-    exportText = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>My grades</title><style>body{color:green;background: black;display: flex;flex-direction: column;align-items: center;justify-content: center;}td,th{border:solid 1px white;padding: 10px;}</style></head><body><h1>My Grades Fall 2023 Math 2300</h1><table><tr><th>Criterion</th><th>Grade</th></tr><tr><th>Homework</th><td>"+hw+"%"+"</td></tr><tr><th>Quizzes</th><td>"+q+"%"+"</td></tr><tr><th>Exams</th><td>"+e+"%"+"</td></tr><tr><th>Participation</th><td>"+p+"%"+"</td></tr><tr><th>Total</th><td>"+t+"%"+"</td></tr><tr><th>Letter Grade</th><td>"+l+"%"+"</td></tr></table></body></html>";
+    exportText = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>My grades</title><style>body{color:green;background: black;display: flex;flex-direction: column;align-items: center;justify-content: center;}td,th{border:solid 1px white;padding: 10px;}</style></head><body><h1>My Grades Fall 2023 Math 2300</h1><table><tr><th>Criterion</th><th>Grade</th></tr><tr><th>Homework</th><td>"+hw+"%"+"</td></tr><tr><th>Quizzes</th><td>"+q+"%"+"</td></tr><tr><th>Exams</th><td>"+e+"%"+"</td></tr><tr><th>Participation</th><td>"+p+"%"+"</td></tr><tr><th>Total</th><td>"+t+"%"+"</td></tr><tr><th>Letter Grade</th><td>"+l+"</td></tr></table></body></html>";
     var blob = new Blob([exportText], {type: "text/html;charset=utf-8"});
     var link = document.createElement("a");
     link.href = URL.createObjectURL(blob);

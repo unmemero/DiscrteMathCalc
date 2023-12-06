@@ -1,4 +1,5 @@
 const calculate = document.getElementById('calculate');
+const fs = require('fs');
 calculate.onclick = () => {
     //Homework calculation
     let homeworkGrade = homeworkHandler(); 
@@ -11,6 +12,7 @@ calculate.onclick = () => {
     //Total calculation
     total = calculateTotal(homeworkGrade, quizGrade, examGrade, participationGrade);
     displayTotal(total);
+    exportInformation(homeworkGrade, quizGrade, examGrade, participationGrade, total);
 };
 
 function homeworkHandler(){
@@ -96,3 +98,6 @@ function letterGradeHandler(total){
         document.getElementById("letterGrade").innerHTML="F";
     }
 };
+function exportInformation(hw,q,e,p,t){
+    
+}

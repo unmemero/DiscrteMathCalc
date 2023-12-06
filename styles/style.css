@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgb(60, 60, 60);
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+.inputs .assignments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputs .assignments table tr th, .inputs .assignments table tr td {
+  border: solid white 1px;
+  font-size: 0.7em;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+.inputs .assignments table tr th.possible, .inputs .assignments table tr td.possible {
+  color: red;
+  background: yellow;
+}
+.inputs .assignments table tr th input, .inputs .assignments table tr td input {
+  width: 40px;
+  text-align: center;
+  background: black;
+  color: rgb(154, 255, 3);
+}
+
+#calculate {
+  width: 200px;
+  height: 60px;
+  font-size: 2em;
+  color: green;
+  background: black;
+  border: white 5px solid;
+}
+#calculate:hover {
+  background: white;
+  color: black;
+  border: green solid 4px;
+}
+#calculate:active {
+  background: red;
+  color: white;
+}
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.totals table tr th, .totals table tr td {
+  border: solid white 1px;
+  padding: 10px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

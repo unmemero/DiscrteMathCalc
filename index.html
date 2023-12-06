@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrete Math Fall 23 Grades</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/discrete-maths-9735938-7918261.png" type="image/x-icon">
+</head>
+<body>
+    <h1>MATH 2300 GRADES FALL 2023</h1>
+    <p style="font-weight:bold;font-size:1.2em;color:red;background:yellow;">Please input all grades before clicking calculate</p>
+    <div class="inputs">
+        <div class="assignments">
+            <h2>Homework</h2>
+            <table>
+                <tr>
+                    <th>Getting Started with WebWork</th>
+                    <td><input type="text" id="hw0" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Introduction</th>
+                    <td><input type="text" id="hw1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Counting Basics</th>
+                    <td><input type="text" id="hw2" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Counting Advanced</th>
+                    <td><input type="text" id="hw3" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Sequences Intro</th>
+                    <td><input type="text" id="hw4" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Recurrence and Induction</th>
+                    <td><input type="text" id="hw5" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Proofs</th>
+                    <td><input type="text" id="hw6" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Graphs Intro</th>
+                    <td><input type="text" id="hw7" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Graphs Paths Circuits</th>
+                    <td><input type="text" id="hw8" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Relations Intro</th>
+                    <td><input type="text" id="hw9" placeholder="0"></td>    
+                </tr>
+                <tr>
+                    <th>Equivalence and Order Of Relations</th>
+                    <td><input type="text" id="hw10" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th class="possible">Posible Total</th>
+                    <td class="possible">1100</td>
+                </tr>
+                <tr>
+                    <th>Actual Total</th>
+                    <td id="hwActual"></td>
+                </tr>
+                <tr>
+                    <th>Percentage</th>
+                    <td id="hwPercentage"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="assignments">
+            <h2>Quizzes</h2>
+            <table>
+                <tr>
+                    <th>Quiz 1A</th>
+                    <td><input type="text" id="q1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Quiz 2B</th>
+                    <td><input type="text" id="q2" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Quiz 3A</th>
+                    <td><input type="text" id="q3" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Quiz 4A</th>
+                    <td><input type="text" id="q4" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Quiz 5B</th>
+                    <td><input type="text" id="q5" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th class="possible">Posible Total</th>
+                    <td class="possible">500</td>
+                </tr>
+                <tr>
+                    <th>Actual Total</th>
+                    <td id="qActual"></td>
+                </tr>
+                <tr>
+                    <th>Percentage</th>
+                    <td id="qPercentage"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="assignments">
+            <h2>Exams</h2>
+            <table>
+                <tr>
+                    <th>Exam 1</th>
+                    <td><input type="text" id="e1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th>Exam 2</th>
+                    <td><input type="text" id="e2" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th class="possible">Posible Total</th>
+                    <td class="possible">200</td>
+                </tr>
+                <tr>
+                    <th>Actual Total</th>
+                    <td id="eActual"></td>
+                </tr>
+                <tr>
+                    <th>Percentage</th>
+                    <td id="ePercentage"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="assignments">
+            <h2>Participation</h2>
+            <table>
+                <tr>
+                    <th>Participation</th>
+                    <td><input type="text" id="p1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <th class="possible">Posible Total</th>
+                    <td class="possible">100</td>
+                </tr>
+                <tr>
+                    <th>Percentage</th>
+                    <td id="pPercentage"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <button type="submit" id="calculate">Calculate</button>
+    <div class="totals">
+        <h2>TOTALS</h2>
+        <table>
+            <tr>
+                <th>Total Percentage</th>
+                <th>Letter Grade</th>
+            </tr>
+            <tr>
+                <td id="percentageTotal"></td>
+                <td id="letterGrade"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

@@ -70,4 +70,11 @@ body {
   border: solid white 1px;
   padding: 10px;
   text-align: center;
+}
+
+@media (max-width: 680px) {
+  .inputs {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */

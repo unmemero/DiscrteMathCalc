@@ -76,3 +76,9 @@ body{
         }
     }
 }
+@media (max-width: 680px) {
+    .inputs{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+}

@@ -1,5 +1,4 @@
 const calculate = document.getElementById('calculate');
-const fs = require('fs');
 calculate.onclick = () => {
     //Homework calculation
     let homeworkGrade = homeworkHandler(); 
@@ -12,7 +11,8 @@ calculate.onclick = () => {
     //Total calculation
     total = calculateTotal(homeworkGrade, quizGrade, examGrade, participationGrade);
     displayTotal(total);
-    exportInformation(homeworkGrade, quizGrade, examGrade, participationGrade, total);
+    let letter = letterGradeHandler(total);
+    exportInformation(homeworkGrade, quizGrade, examGrade, participationGrade, total, letter);
 };
 
 function homeworkHandler(){
@@ -78,26 +78,35 @@ function calculateTotal(hw,q,e,p){
 
 function displayTotal(total){
     document.getElementById("percentageTotal").innerHTML=total+"%";
-    letterGradeHandler(total);
 };
 
 function letterGradeHandler(total){
     if(total>89){
         document.getElementById("letterGrade").innerHTML="A";
+        return 'A';
     }
     else if(total<90 && total>79){
         document.getElementById("letterGrade").innerHTML="B";
+        return 'B';
     }
     else if(total<80 && total>69){
         document.getElementById("letterGrade").innerHTML="C";
+        return 'C';
     }
     else if(total<70 && total>59){
         document.getElementById("letterGrade").innerHTML="D";
+        return 'D';
     }
     else{
         document.getElementById("letterGrade").innerHTML="F";
+        return 'F';
     }
 };
-function exportInformation(hw,q,e,p,t){
-    
+function exportInformation(hw,q,e,p,t,l){
+    exportText = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>My grades</title><style>body{color:green;background: black;display: flex;flex-direction: column;align-items: center;justify-content: center;}td,th{border:solid 1px white;padding: 10px;}</style></head><body><h1>My Grades Fall 2023 Math 2300</h1><table><tr><th>Criterion</th><th>Grade</th></tr><tr><th>Homework</th><td>"+hw+"</td></tr><tr><th>Quizzes</th><td>"+q+"</td></tr><tr><th>Exams</th><td>"+e+"</td></tr><tr><th>Participation</th><td>"+p+"</td></tr><tr><th>Total</th><td>"+t+"</td></tr><tr><th>Letter Grade</th><td>"+l+"</td></tr></table></body></html>";
+    var blob = new Blob([exportText], {type: "text/html;charset=utf-8"});
+    var link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "grades.html";
+    link.click();
 }

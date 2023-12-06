@@ -46,6 +46,7 @@ body {
   height: 60px;
   color: green;
   background: black;
+  font-weight: bold;
   border: white 5px solid;
 }
 #calculate:hover {

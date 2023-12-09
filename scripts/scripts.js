@@ -50,7 +50,7 @@ function quizHandler(){
 function examHandler() {
     let examResult = 0;
     let examString = 'e';
-    for(let i = 1; i<3;i++){
+    for(let i = 1; i<5;i++){
         examString += i;
         if (document.getElementById(examString).value!=''){
             examResult += parseInt(document.getElementById(examString).value);

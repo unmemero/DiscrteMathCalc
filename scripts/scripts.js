@@ -58,7 +58,7 @@ function examHandler() {
         examString = 'e';
     }
     document.getElementById("eActual").innerHTML=examResult;
-    examPercentage = Math.round((examResult*15)/200);
+    examPercentage = Math.round((examResult*15)/400);
     document.getElementById("ePercentage").innerHTML=examPercentage+'%';
     return examPercentage;
 };
